@@ -7,7 +7,7 @@ import 'package:http/http.dart' as http;
 import 'package:share/share.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
-import 'package:timeago/timeago.dart';
+import 'package:timeago/timeago.dart' as timeago;
 import './globalStore.dart' as globalStore;
 
 class SearchScreen extends StatefulWidget {
@@ -49,7 +49,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
     if (mounted) {
       this.setState(() {
-        data = JSON.decode(response.body);
+        data = jsonDecode(response.body);
         snapshot = snap;
       });
     }
@@ -175,7 +175,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                   new Padding(
                                     padding: new EdgeInsets.only(left: 4.0),
                                     child: new Text(
-                                      timeAgo(DateTime.parse(data["articles"]
+                                      timeago.format(DateTime.parse(data["articles"]
                                           [index]["publishedAt"])),
                                       style: new TextStyle(
                                         fontWeight: FontWeight.w400,
@@ -233,8 +233,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                       ),
                                       onTap: () {
                                         flutterWebviewPlugin.launch(
-                                            data["articles"][index]["url"],
-                                            fullScreen: false);
+                                            data["articles"][index]["url"]);
                                       },
                                     ),
                                   ),
@@ -263,7 +262,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                 child: buildButtonColumn(
                                                     Icons.share)),
                                             onTap: () {
-                                              share(data["articles"][index]
+                                              Share.share(data["articles"][index]
                                                   ["url"]);
                                             },
                                           ),

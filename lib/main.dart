@@ -39,7 +39,7 @@ class NewsBuzzState extends State<NewsBuzz>
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: new Text("News Buzz"),
+          title: new Text("Tim News App"),
           centerTitle: true,
         ),
         bottomNavigationBar: new Material(

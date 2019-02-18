@@ -32,7 +32,7 @@ class _SourceLibraryScreenState extends State<SourceLibraryScreen> {
     var snap = await globalStore.articleSourcesDatabaseReference.once();
     if (mounted) {
       this.setState(() {
-        sources = JSON.decode(libSources.body);
+        sources = jsonDecode(libSources.body);
         snapshot = snap;
       });
     }

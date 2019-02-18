@@ -1,141 +1,190 @@
 PODS:
-  - Firebase/Auth (3.17.0):
-    - Firebase/Core
-    - FirebaseAuth (= 3.1.1)
-  - Firebase/Core (3.17.0):
-    - FirebaseAnalytics (= 3.9.0)
-    - FirebaseCore (= 3.6.0)
-  - Firebase/Database (3.17.0):
-    - Firebase/Core
-    - FirebaseDatabase (= 3.1.2)
-  - Firebase/Storage (3.17.0):
-    - Firebase/Core
-    - FirebaseStorage (= 1.1.0)
+  - Firebase/Auth (5.16.0):
+    - Firebase/CoreOnly
+    - FirebaseAuth (= 5.3.0)
+  - Firebase/Core (5.16.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 5.5.0)
+  - Firebase/CoreOnly (5.16.0):
+    - FirebaseCore (= 5.2.0)
+  - Firebase/Database (5.16.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (= 5.1.0)
+  - Firebase/Storage (5.16.0):
+    - Firebase/CoreOnly
+    - FirebaseStorage (= 3.1.0)
   - firebase_analytics (0.0.1):
     - Firebase/Core
     - Flutter
   - firebase_auth (0.0.1):
     - Firebase/Auth
     - Firebase/Core
-    - FirebaseUI/Auth (~> 3.0)
-    - FirebaseUI/Google
     - Flutter
-    - Google/SignIn
+  - firebase_core (0.0.1):
+    - Firebase/Core
+    - Flutter
   - firebase_database (0.0.1):
     - Firebase/Database
     - Flutter
   - firebase_storage (0.0.1):
     - Firebase/Storage
     - Flutter
-  - FirebaseAnalytics (3.9.0):
-    - FirebaseCore (~> 3.6)
-    - FirebaseInstanceID (~> 1.0)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseAuth (3.1.1):
-    - FirebaseAnalytics (~> 3.7)
-    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
+  - FirebaseAnalytics (5.5.0):
+    - FirebaseCore (~> 5.2)
+    - FirebaseInstanceID (~> 3.4)
+    - GoogleAppMeasurement (= 5.5.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
+    - GoogleUtilities/MethodSwizzler (~> 5.2)
+    - GoogleUtilities/Network (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - nanopb (~> 0.3)
+  - FirebaseAuth (5.3.0):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 5.2)
+    - GoogleUtilities/Environment (~> 5.2)
     - GTMSessionFetcher/Core (~> 1.1)
-  - FirebaseCore (3.6.0):
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseDatabase (3.1.2):
-    - FirebaseAnalytics (~> 3.7)
-  - FirebaseInstanceID (1.0.10):
-    - FirebaseCore (~> 3.6)
-  - FirebaseStorage (1.1.0):
-    - FirebaseAnalytics (~> 3.7)
+  - FirebaseAuthInterop (1.0.0)
+  - FirebaseCore (5.2.0):
+    - GoogleUtilities/Logger (~> 5.2)
+  - FirebaseDatabase (5.1.0):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 5.2)
+    - leveldb-library (~> 1.18)
+  - FirebaseInstanceID (3.4.0):
+    - FirebaseCore (~> 5.2)
+    - GoogleUtilities/Environment (~> 5.3)
+    - GoogleUtilities/UserDefaults (~> 5.3)
+  - FirebaseStorage (3.1.0):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 5.2)
     - GTMSessionFetcher/Core (~> 1.1)
-  - FirebaseUI/Auth (3.1.1):
-    - Firebase/Auth
-  - FirebaseUI/Google (3.1.1):
-    - FirebaseUI/Auth
-    - GoogleSignIn (~> 4.0)
   - Flutter (1.0.0)
   - flutter_webview_plugin (0.0.1):
     - Flutter
-  - Google/Core (3.1.0):
-    - FirebaseAnalytics (~> 3.2)
-  - Google/SignIn (3.1.0):
-    - Google/Core
-    - GoogleSignIn (~> 4.0)
   - google_sign_in (0.0.1):
     - Flutter
     - GoogleSignIn (~> 4.0)
-  - GoogleSignIn (4.1.1):
-    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
-    - GoogleToolboxForMac/NSString+URLArguments (~> 2.1)
-    - GTMOAuth2 (~> 1.0)
+  - GoogleAppMeasurement (5.5.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
+    - GoogleUtilities/MethodSwizzler (~> 5.2)
+    - GoogleUtilities/Network (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - nanopb (~> 0.3)
+  - GoogleSignIn (4.4.0):
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
     - GTMSessionFetcher/Core (~> 1.1)
-  - GoogleToolboxForMac/DebugUtils (2.1.1):
-    - GoogleToolboxForMac/Defines (= 2.1.1)
-  - GoogleToolboxForMac/Defines (2.1.1)
-  - GoogleToolboxForMac/NSData+zlib (2.1.1):
-    - GoogleToolboxForMac/Defines (= 2.1.1)
-  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.1):
-    - GoogleToolboxForMac/DebugUtils (= 2.1.1)
-    - GoogleToolboxForMac/Defines (= 2.1.1)
-    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
-  - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
-  - GTMOAuth2 (1.1.6):
-    - GTMSessionFetcher (~> 1.1)
-  - GTMSessionFetcher (1.1.11):
-    - GTMSessionFetcher/Full (= 1.1.11)
-  - GTMSessionFetcher/Core (1.1.11)
-  - GTMSessionFetcher/Full (1.1.11):
-    - GTMSessionFetcher/Core (= 1.1.11)
-  - share (0.0.1):
+  - GoogleToolboxForMac/DebugUtils (2.2.0):
+    - GoogleToolboxForMac/Defines (= 2.2.0)
+  - GoogleToolboxForMac/Defines (2.2.0)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.2.0)":
+    - GoogleToolboxForMac/DebugUtils (= 2.2.0)
+    - GoogleToolboxForMac/Defines (= 2.2.0)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.2.0)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.2.0)"
+  - GoogleUtilities/AppDelegateSwizzler (5.3.7):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (5.3.7)
+  - GoogleUtilities/Logger (5.3.7):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (5.3.7):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (5.3.7):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (5.3.7)"
+  - GoogleUtilities/Reachability (5.3.7):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (5.3.7):
+    - GoogleUtilities/Logger
+  - GTMSessionFetcher/Core (1.2.1)
+  - leveldb-library (1.20)
+  - nanopb (0.3.901):
+    - nanopb/decode (= 0.3.901)
+    - nanopb/encode (= 0.3.901)
+  - nanopb/decode (0.3.901)
+  - nanopb/encode (0.3.901)
+  - share (0.5.2):
     - Flutter
 
 DEPENDENCIES:
-  - firebase_analytics (from `/Users/ankurkedia/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-0.0.4/ios`)
-  - firebase_auth (from `/Users/ankurkedia/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.2.0/ios`)
-  - firebase_database (from `/Users/ankurkedia/.pub-cache/hosted/pub.dartlang.org/firebase_database-0.0.12/ios`)
-  - firebase_storage (from `/Users/ankurkedia/.pub-cache/hosted/pub.dartlang.org/firebase_storage-0.0.5/ios`)
-  - Flutter (from `/Users/ankurkedia/flutter/bin/cache/artifacts/engine/ios`)
-  - flutter_webview_plugin (from `/Users/ankurkedia/.pub-cache/hosted/pub.dartlang.org/flutter_webview_plugin-0.0.9+1/ios`)
-  - google_sign_in (from `/Users/ankurkedia/.pub-cache/hosted/pub.dartlang.org/google_sign_in-0.3.1/ios`)
-  - share (from `/Users/ankurkedia/.pub-cache/hosted/pub.dartlang.org/share-0.2.2/ios`)
+  - firebase_analytics (from `/Users/timothyosborne/www/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-2.0.1/ios`)
+  - "firebase_auth (from `/Users/timothyosborne/www/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.8.1+1/ios`)"
+  - "firebase_core (from `/Users/timothyosborne/www/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.3.0+2/ios`)"
+  - "firebase_database (from `/Users/timothyosborne/www/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_database-2.0.1+1/ios`)"
+  - "firebase_storage (from `/Users/timothyosborne/www/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage-2.0.1+1/ios`)"
+  - Flutter (from `/Users/timothyosborne/www/flutter/bin/cache/artifacts/engine/ios`)
+  - "flutter_webview_plugin (from `/Users/timothyosborne/www/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_webview_plugin-0.3.0+2/ios`)"
+  - "google_sign_in (from `/Users/timothyosborne/www/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in-4.0.1+1/ios`)"
+  - "share (from `/Users/timothyosborne/www/flutter/.pub-cache/hosted/pub.dartlang.org/share-0.6.0+1/ios`)"
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseAuth
+    - FirebaseAuthInterop
+    - FirebaseCore
+    - FirebaseDatabase
+    - FirebaseInstanceID
+    - FirebaseStorage
+    - GoogleAppMeasurement
+    - GoogleSignIn
+    - GoogleToolboxForMac
+    - GoogleUtilities
+    - GTMSessionFetcher
+    - leveldb-library
+    - nanopb
 
 EXTERNAL SOURCES:
   firebase_analytics:
-    :path: /Users/ankurkedia/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-0.0.4/ios
+    :path: "/Users/timothyosborne/www/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_analytics-2.0.1/ios"
   firebase_auth:
-    :path: /Users/ankurkedia/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.2.0/ios
+    :path: "/Users/timothyosborne/www/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.8.1+1/ios"
+  firebase_core:
+    :path: "/Users/timothyosborne/www/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.3.0+2/ios"
   firebase_database:
-    :path: /Users/ankurkedia/.pub-cache/hosted/pub.dartlang.org/firebase_database-0.0.12/ios
+    :path: "/Users/timothyosborne/www/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_database-2.0.1+1/ios"
   firebase_storage:
-    :path: /Users/ankurkedia/.pub-cache/hosted/pub.dartlang.org/firebase_storage-0.0.5/ios
+    :path: "/Users/timothyosborne/www/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage-2.0.1+1/ios"
   Flutter:
-    :path: /Users/ankurkedia/flutter/bin/cache/artifacts/engine/ios
+    :path: "/Users/timothyosborne/www/flutter/bin/cache/artifacts/engine/ios"
   flutter_webview_plugin:
-    :path: /Users/ankurkedia/.pub-cache/hosted/pub.dartlang.org/flutter_webview_plugin-0.0.9+1/ios
+    :path: "/Users/timothyosborne/www/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_webview_plugin-0.3.0+2/ios"
   google_sign_in:
-    :path: /Users/ankurkedia/.pub-cache/hosted/pub.dartlang.org/google_sign_in-0.3.1/ios
+    :path: "/Users/timothyosborne/www/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in-4.0.1+1/ios"
   share:
-    :path: /Users/ankurkedia/.pub-cache/hosted/pub.dartlang.org/share-0.2.2/ios
+    :path: "/Users/timothyosborne/www/flutter/.pub-cache/hosted/pub.dartlang.org/share-0.6.0+1/ios"
 
 SPEC CHECKSUMS:
-  Firebase: 4b66b5b59c43edac745b87f0c87e42cdd0279c13
-  firebase_analytics: e14732ea6575c050175fa09e07358db87842dbe3
-  firebase_auth: bc8727f162f8af67ae665f9c533ef546a8f789de
-  firebase_database: 8d50f5c188b769afc186b0a700b2c6cdb8208df9
-  firebase_storage: eb8091489a1cfb657eeefc933bb1ccfab23195a3
-  FirebaseAnalytics: e5fe8486efc01bec33f6bf82e2fa9fce4b124052
-  FirebaseAuth: cc8a1824170adbd351edb7f994490a3fb5c18be6
-  FirebaseCore: 9691ee2ade70c098d7cf92440f4303f16d83ca75
-  FirebaseDatabase: 05c96d7b43a7368dc91c07791adb49683e1738d1
-  FirebaseInstanceID: b9eedd6846fb5e1f0f7279e1deaa7a7e4cf8392e
-  FirebaseStorage: a5c55b23741a49a72af8f30f95b3bb5ddbeda12d
-  FirebaseUI: 6e99ff95e369f5858232e4f65bff215458fe8469
-  Flutter: d674e78c937094a75ac71dd77e921e840bea3dbf
+  Firebase: 749a8ff4962f9d8c79dda1966de20f6f77583d67
+  firebase_analytics: bd50d8f5d3f42dcab6da67944a849062470b0a19
+  firebase_auth: 02ced56521bc9f220d40edda27b1ec5a2fcdf01e
+  firebase_core: ce5006bb48508ee4e71e0f429a3f519bb8ee2961
+  firebase_database: 99b15d6a0536ee969200b6eaf69bcd0b15b7b114
+  firebase_storage: 2543f377090a6e219caab9224dead5bbcb30ef33
+  FirebaseAnalytics: d35d47c03c50c73c14a7fd31463c5775843e78a9
+  FirebaseAuth: c9b3ff063c223d2841d97240af547ce511bce19a
+  FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
+  FirebaseCore: ea2d1816723ef21492b8e9113303e1350db5e08c
+  FirebaseDatabase: 23acb0c53cd4d4070a427b60100b2e4aaa97c45d
+  FirebaseInstanceID: 97ea7a5dca9afd72c79bfcdddb7a44aa1cbb42a1
+  FirebaseStorage: 29075f874c2b3cf61e5221a62c4ceefc809e5412
+  Flutter: 58dd7d1b27887414a370fcccb9e645c08ffd7a6a
   flutter_webview_plugin: ed9e8a6a96baf0c867e90e1bce2673913eeac694
-  Google: 98da4b1a60ed0beb80a290387a28333406a1eb90
-  google_sign_in: 24ea34feed2d7d04e957cd1c4daf063c488532c2
-  GoogleSignIn: 3fdaa34a2ba04dbd7a25d7db39aecb0da98d5bdc
-  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
-  GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
-  GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
-  share: ee3d34d3969ad17fc3043eab552e4f082aacfed1
+  google_sign_in: 27e70a98b529f0b076d4b19f231b81da28b1750b
+  GoogleAppMeasurement: 621f3bc6211d5ba548debe01fafad30cf5ab6859
+  GoogleSignIn: 7ff245e1a7b26d379099d3243a562f5747e23d39
+  GoogleToolboxForMac: ff31605b7d66400dcec09bed5861689aebadda4d
+  GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
+  GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
+  leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  share: 7d22fe8baedfe93aefd864bf0b73f29711fbb0a3
 
 PODFILE CHECKSUM: 351e02e34b831289961ec3558a535cbd2c4965d2
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.6.0

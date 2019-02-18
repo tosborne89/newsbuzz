@@ -13,6 +13,7 @@ GoogleSignInAccount user;
 var userDatabaseReference;
 var articleSourcesDatabaseReference;
 var articleDatabaseReference;
+
 Future<Null> _ensureLoggedIn() async {
   user = googleSignIn.currentUser;
   if (user == null) {
@@ -29,11 +30,12 @@ Future<Null> _ensureLoggedIn() async {
   }
   if (await auth.currentUser() == null) {
     GoogleSignInAuthentication credentials =
-        await googleSignIn.currentUser.authentication;
-    await auth.signInWithGoogle(
-      idToken: credentials.idToken,
-      accessToken: credentials.accessToken,
-    );
+      await googleSignIn.currentUser.authentication;
+      final AuthCredential credential = GoogleAuthProvider.getCredential(
+        accessToken: credentials.accessToken,
+        idToken: credentials.idToken,
+      );
+      await auth.signInWithCredential(credential);
   } else {
     userDatabaseReference = databaseReference.child(user.id);
     articleDatabaseReference =
